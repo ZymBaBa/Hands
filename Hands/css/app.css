@@ -1,0 +1,13 @@
+html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-title{
+				color:#fff;
+			}
+			.mui-badge-green{
+				background: #10ac86;
+			}
+			.mui-active{
+				color: #10ac86 !important;
+			}
