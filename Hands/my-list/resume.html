@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="feedback">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的简历</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+		<link rel="stylesheet" href="../css/app.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
+			<h1 class="mui-title">我的简历</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<div class="mui-inline">基本资料</div>
+			</div>
+			<div class="row mui-input-row">
+				<label>姓名</label>
+						<input type="text" placeholder="周佳缘">
+							<label>性别</label>
+						<input type="text" placeholder="男">
+							<label>年龄</label>
+						<input type="text" placeholder="29">
+							<label>出生年月</label>
+						<input type="text" placeholder="1987-01-22">
+								<label>联系电话</label>
+						<input type="text" placeholder="13967314931">
+			</div>
+			<div class="mui-content-padded">
+				<div class="mui-inline">个人介绍</div>
+			</div>
+			<div class="row mui-input-row">
+				<textarea id='question' class="mui-input-clear question" placeholder="请简历描述一下自己吧..."></textarea>
+			</div>
+			<p>个人风采(选填)</p>
+			<div id='image-list' class="row image-list"></div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src=" ../js/feedback.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-scroll-wrapper').scroll();
+		</script>
+	</body>
+</html>

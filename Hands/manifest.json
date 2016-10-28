@@ -201,11 +201,13 @@
 					"css/iconfont.css",
 					"css/mui.min.css",
 					"fonts/iconfont.ttf",
-					"tab-webview-subpage-chat.html"
+					"tab-webview-subpage-chat.html",
+					"js/immersed.js"
 				],
 				"refer": [
 					"tab-webview-subpage-setting.html",
-					"tab-webview-subpage-contact.html"
+					"tab-webview-subpage-contact.html",
+					"setting.html"
 				],
 				"priority": 0
 			},
@@ -214,9 +216,14 @@
 					"select/slider-default.html",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/common.js",
+					"css/app.css"
 				],
-				"refer": [],
+				"refer": [
+					"select/demo.html",
+					"select/pullrefresh_main.html"
+				],
 				"priority": 0
 			},
 			"select/slider-default.html": {
@@ -239,13 +246,57 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
 			},
 			"tab-webview-subpage-contact.html": {
 				"resources": [
+					"css/mui.min.css",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab-webview-subpage-chat.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"select/demo.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"select/pullrefresh_main.html": {
+				"resources": [
+					"css/app.css",
+					"select/pullrefresh_sub.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"setting.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/feedback.js",
+					"js/mui.view.js",
+					"fonts/mui.ttf",
 					"css/mui.min.css"
 				],
 				"refer": [],
@@ -276,7 +327,6 @@
 				"css/mui.picker.min.css",
 				"images/login-1.png",
 				"js/mui.indexedlist.js",
-				"js/mui.view.js",
 				"js/beecloud.js",
 				"js/mui.pullToRefresh.js",
 				"js/mui.picker.js",
@@ -294,7 +344,6 @@
 				"css/mui.picker.all.css",
 				"js/update.js",
 				"js/mui.locker.js",
-				"js/feedback.js",
 				"js/arttmpl.js"
 			]
 		}

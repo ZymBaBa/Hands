@@ -8,13 +8,15 @@
 			"css/iconfont.css",
 			"css/mui.min.css",
 			"fonts/iconfont.ttf",
-			"tab-webview-subpage-chat.html"
+			"tab-webview-subpage-chat.html",
+			"js/immersed.js"
 		],
 		"refer": [
 			"tab-webview-subpage-about.html",
 			"tab-webview-subpage-setting.html",
 			"tab-webview-subpage-chat.html",
-			"tab-webview-subpage-contact.html"
+			"tab-webview-subpage-contact.html",
+			"setting.html"
 		]
 	},
 	"tab-webview-subpage-about.html": {
@@ -22,10 +24,14 @@
 			"select/slider-default.html",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"js/common.js",
+			"css/app.css"
 		],
 		"refer": [
-			"select/slider-default.html"
+			"select/slider-default.html",
+			"select/demo.html",
+			"select/pullrefresh_main.html"
 		]
 	},
 	"select/slider-default.html": {
@@ -47,11 +53,50 @@
 		"resources": [
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"js/common.js"
 		]
 	},
 	"tab-webview-subpage-contact.html": {
 		"resources": [
+			"css/mui.min.css",
+			"js/common.js"
+		]
+	},
+	"tab-webview-subpage-chat.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"select/demo.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"select/pullrefresh_main.html": {
+		"resources": [
+			"css/app.css",
+			"select/pullrefresh_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"select/pullrefresh_sub.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/feedback.js",
+			"js/mui.view.js",
+			"fonts/mui.ttf",
 			"css/mui.min.css"
 		]
 	}

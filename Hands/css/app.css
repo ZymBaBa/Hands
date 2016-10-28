@@ -5,9 +5,23 @@ html,
 			.mui-title{
 				color:#fff;
 			}
-			.mui-badge-green{
-				background: #10ac86;
+			.mui-bar-nav{
+				background: #10ac86 !important;
 			}
 			.mui-active{
 				color: #10ac86 !important;
 			}
+			.mui-pull-left{
+				color:#fff !important;
+			}
+			
+			.mui-pull-right{
+				color: #FFFFFF !important;
+			}
+			label{
+				color: #8a8a8a;
+			}
+			#resume input{
+				color: #000000;
+			}
+			

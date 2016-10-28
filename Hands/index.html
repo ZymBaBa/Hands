@@ -10,15 +10,19 @@
 		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" href="css/iconfont.css" />
 		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/all.css" />
 		<style>
 			html,
 			body {
 				background-color: #efeff4;
 			}
+			#search{
+				color: #fff;
+			}
 		</style>
 			<body>
 		<header class="mui-bar mui-bar-nav mui-badge-green">
-			<h1 id="title" class="mui-title">首页</h1>
+			<h1 id="title" class="mui-title">APP名字</h1>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
 			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
@@ -33,7 +37,7 @@
 				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">通讯录</span>
 			</a>
-			<a class="mui-tab-item" href="tab-webview-subpage-setting.html">
+			<a class="mui-tab-item" href="my-list/setting.html">
 				<span class="mui-icon mui-icon-gear"></span>
 				<span class="mui-tab-label">设置</span>
 			</a>
@@ -41,8 +45,11 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" charset="utf-8"> 
 			 //mui初始化
-			mui.init();
-			var subpages = ['tab-webview-subpage-about.html', 'tab-webview-subpage-chat.html', 'tab-webview-subpage-contact.html', 'tab-webview-subpage-setting.html'];
+			mui.init({
+				swipeBack: false,
+				statusBarBackground: '#10ac86'
+			});
+			var subpages = ['tab-webview-subpage-about.html', 'tab-webview-subpage-chat.html', 'tab-webview-subpage-contact.html', 'my-list/setting.html'];
 			var subpage_style = {
 				top: '45px',
 				bottom: '51px'
