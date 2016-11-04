@@ -1312,7 +1312,7 @@ a.box:active {
   padding-right: 36px; }
 
 .select select:hover {
-  border-color: #aeb1b5; }
+  border-color: #10ac86; }
 
 .select select:active, .select select:focus, .select select.is-active {
   border-color: #00dffc;
@@ -1370,7 +1370,7 @@ a.box:active {
   border-color: #f68b39; }
 
 .select select:hover {
-  border-color: #aeb1b5; }
+  border-color: #10ac86; }
 
 .select select::ms-expand {
   display: none; }
@@ -1382,7 +1382,7 @@ a.box:active {
   width: 100%; }
 
 .select:after {
-  border: 1px solid #00dffc;
+  border: 1px solid #10ac86;
   border-right: 0;
   border-top: 0;
   content: " ";

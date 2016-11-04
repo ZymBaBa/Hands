@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>账号与安全</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+	
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+		<link rel="stylesheet" href="../css/all.css" />
+		<link rel="stylesheet" href="../css/font-awesome.css"/>
+		<link rel="stylesheet" href="../css/app.css"/>
+		<style>
+		.mui-card-link{
+			color: #8A8A8A;
+		}
+		.mui-alr{
+			color: #10ac86;
+		}
+		.mui-views,
+			.mui-view,
+			.mui-pages,
+			.mui-page,
+			.mui-page-content {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #efeff4;
+			}
+			.mui-pages {
+				top: 46px;
+				height: auto;
+			}
+			.mui-scroll-wrapper,
+			.mui-scroll {
+				background-color: #efeff4;
+			}
+			.mui-page.mui-transitioning {
+				-webkit-transition: -webkit-transform 300ms ease;
+				transition: transform 300ms ease;
+			}
+			.mui-page-left {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			.mui-ios .mui-page-left {
+				-webkit-transform: translate3d(-20%, 0, 0);
+				transform: translate3d(-20%, 0, 0);
+			}
+			.mui-navbar {
+				position: fixed;
+				right: 0;
+				left: 0;
+				z-index: 10;
+				height: 44px;
+				background-color: #f7f7f8;
+			}
+			.mui-navbar .mui-bar {
+				position: absolute;
+				background: transparent;
+				text-align: center;
+			}
+			.mui-android .mui-navbar-inner.mui-navbar-left {
+				opacity: 0;
+			}
+			.mui-ios .mui-navbar-left .mui-left,
+			.mui-ios .mui-navbar-left .mui-center,
+			.mui-ios .mui-navbar-left .mui-right {
+				opacity: 0;
+			}
+			.mui-navbar .mui-btn-nav {
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			.mui-navbar .mui-bar .mui-title {
+				display: inline-block;
+				width: auto;
+			}
+			.mui-page-shadow {
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 16px;
+				height: 100%;
+				z-index: -1;
+				content: '';
+			}
+			.mui-page-shadow {
+				background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+				background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+			}
+			.mui-navbar-inner.mui-transitioning,
+			.mui-navbar-inner .mui-transitioning {
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+			}
+			.mui-page {
+				display: none;
+			}
+			.mui-pages .mui-page {
+				display: block;
+			}
+			.mui-page .mui-table-view:first-child {
+				margin-top: 15px;
+			}
+			.mui-page .mui-table-view:last-child {
+				margin-bottom: 30px;
+			}
+			.mui-table-view {
+				margin-top: 20px;
+			}
+			.mui-table-view span.mui-pull-right {
+				color: #999;
+			}
+			.mui-table-view-divider {
+				background-color: #efeff4;
+				font-size: 14px;
+			}
+			.mui-table-view-divider:before,
+			.mui-table-view-divider:after {
+				height: 0;
+			}
+			.head {
+				height: 40px;
+			}
+			#head {
+				line-height: 40px;
+			}
+			.head-img {
+				width: 40px;
+				height: 40px;
+			}
+			#head-img1 {
+				position: absolute;
+				bottom: 10px;
+				right: 40px;
+				width: 40px;
+				height: 40px;
+			}
+			.update {
+				font-style: normal;
+				color: #999999;
+				margin-right: -25px;
+				font-size: 15px
+			}
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-ios .mui-navbar .mui-bar .mui-title {
+				position: static;
+			}
+			/*问题反馈在setting页面单独的css*/
+			#feedback .mui-popover{
+				position: fixed;
+			}
+			#feedback .mui-table-view:last-child {
+			    margin-bottom: 0px;
+			}
+			#feedback .mui-table-view:first-child {
+			    margin-top: 0px;
+			}
+			.mile-list{
+				margin: 0;
+				padding: 0;
+			}
+			.mile-list li{
+				list-style-type: none;
+				margin: 5px;
+				color: #8a8a8a;
+			}
+			.mile-list li span{
+				list-style-type: none;
+				margin: 5px;
+				color: #333;
+			}
+			.mui-pull-right{
+				color: #8A8A8A !important;
+				margin-right: 20px !important;
+			}
+		</style>
+			
+	</head>
+
+	<body class="mui-fullscreen">
+		<!--页面主结构开始-->
+		<div id="app" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div>
+		<!--页面主结构结束-->
+		<!--单页面开始-->
+		<div id="setting" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<h1 class="mui-center mui-title">账号与安全</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a id="head" class="mui-navigate-right">头像
+								<span class="mui-pull-right head">
+									<img class="head-img mui-action-preview" id="head-img1" src="">
+								</span>
+							</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>手机号<span class="mui-pull-right">139****4931</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a href="#user" class="mui-navigate-right">用户名<span class="mui-pull-right">未设置</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a href="#realname" class="mui-navigate-right">实名认证<span class="mui-pull-right">未认证</span></a>
+							</li>
+							
+							<li class="mui-table-view-cell">
+								<a href="#password" class="mui-navigate-right">修改密码</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a href="#qq" class="mui-navigate-right">QQ号<span class="mui-pull-right">未设置</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a href="#email" class="mui-navigate-right">邮箱地址<span class="mui-pull-right">未设置</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a href="#weixin"  class="mui-navigate-right">微信号<span class="mui-pull-right">未设置</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--单页面结束-->
+		<!--实名认证  开始-->
+		<div id="realname" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">实名认证</h1>
+			</div>
+			<div class="box">
+				<p class="control has-icon">
+				  <input class="input" type="text"  maxlength="12" value="1396****4931" disabled>
+				  <i class="fa fa-phone"></i>
+				</p>
+				<p class="control has-icon has-addons ">
+							  <input class="input is-expanded" type="tel" placeholder="请输入6位验证码" maxlength="6">
+							  <i class="fa fa-barcode"></i>
+							   <a class="button is-info is-success">获取验证码</a>
+						</p>
+				<p class="control has-icon">
+				  <input class="input" type="text" placeholder="请输入您的真实姓名"  maxlength="8">
+				  <i class="fa fa-user-circle"></i>
+				</p>
+				<p class="control has-icon">
+				  <input class="input" type="tel" placeholder="请输入您的身份证号15-18位"  maxlength="18">
+				  <i class="fa  fa-vcard-o"></i>
+				</p>
+			</div>
+				<div class="columns is-mobile">
+				<div class="column is-10 is-offset-1">
+					<a type="button" class="button is-success is-flex-touch">认证</a>
+				</div>
+			</div>
+		</div>
+		<!--实名认证  结束-->
+		<!--修改密码页 开始-->
+		<div id="password" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">修改密码</h1>
+			</div>
+			<div class="box">
+				<div class="columns">
+					<div class="column is-half">
+						<p class="control has-icon">
+							  <input class="input" type="password" placeholder="请输入旧密码" maxlength="20">
+							  <i class="fa fa-unlock-alt"></i>
+						</p>
+						<p class="control has-icon">
+							  <input class="input" type="password" placeholder="设置密码，6-20位字母、数字和符号" maxlength="20">
+							  <i class="fa fa-lock"></i>
+						</p>
+						<p class="control has-icon">
+							  <input class="input" type="password" placeholder="重复密码，6-20位字母、数字和符号" maxlength="20">
+							  <i class="fa fa-lock"></i>  
+						</p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="columns is-mobile">
+				<div class="column is-10 is-offset-1">
+					<a type="button" class="button is-success is-flex-touch">注册</a>
+				</div>
+			</div>
+		</div>
+		<!--修改密码 页结束-->
+		<!--设置用户名 页开始-->
+		<div id="user" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">用户名</h1>
+			</div>
+			<div class="box">
+				<div class="columns">
+					<div class="column is-half">
+						<p class="control has-icon">
+							  <input class="input" type="text" placeholder="请设置您的用户名，设置完成后不能进行修改">
+							  <i class="fa fa-user-circle"></i>
+						</p>
+						<a type="button" class="button is-success is-flex-touch">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--设置用户名 页结束-->
+		<!--QQ号 页开始-->
+		<div id="qq" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">QQ号</h1>
+			</div>
+			<div class="box">
+				<div class="columns">
+					<div class="column is-half">
+						<p class="control has-icon">
+							  <input class="input" type="text" placeholder="请输入您的QQ号" maxlength="20">
+							  <i class="fa fa-qq"></i>
+						</p>
+						<a type="button" class="button is-success is-flex-touch">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--QQ号 页结束-->
+		<!--邮箱地址 页开始-->
+		<div id="email" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">邮箱地址</h1>
+			</div>
+			<div class="box">
+				<div class="columns">
+					<div class="column is-half">
+						<p class="control has-icon">
+							  <input class="input" type="email" placeholder="请输入您的邮箱地址">
+							  <i class="fa fa-envelope-o"></i>
+						</p>
+						<a type="button" class="button is-success is-flex-touch">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--邮箱地址 页结束-->
+		<!--微信号 页开始-->
+		<div id="weixin" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>账号与安全
+				</button>
+				<h1 class="mui-center mui-title">微信号</h1>
+			</div>
+			<div class="box">
+				<div class="columns">
+					<div class="column is-half">
+						<p class="control has-icon">
+							  <input class="input" type="text" placeholder="请输入您的微信账号">
+							  <i class="fa fa-weixin"></i>
+						</p>
+						<a type="button" class="button is-success is-flex-touch">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--微信号 页结束-->
+	</body>
+		<script src="../js/mui.min.js "></script>
+		<script src="../js/mui.view.js "></script>
+		<script src='../js/feedback.js'></script>
+		<script>
+			mui.init();
+			var viewApi = mui('#app').view({
+				defaultPage: '#setting'
+			});
+			//初始化单页的区域滚动
+			mui('.mui-scroll-wrapper').scroll();
+	
+			var view = viewApi.view;
+			(function($) {
+				//处理view的后退与webview后退
+				var oldBack = $.back;
+				$.back = function() {
+					if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+						viewApi.back();
+					} else { //执行webview后退
+						oldBack();
+					}
+				};
+				//监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
+				//第一个参数为事件名称，第二个参数为事件回调，其中e.detail.page为当前页面的html对象
+				view.addEventListener('pageBeforeShow', function(e) {
+					//				console.log(e.detail.page.id + ' beforeShow');
+				});
+				view.addEventListener('pageShow', function(e) {
+					//				console.log(e.detail.page.id + ' show');
+				});
+				view.addEventListener('pageBeforeBack', function(e) {
+					//				console.log(e.detail.page.id + ' beforeBack');
+				});
+				view.addEventListener('pageBack', function(e) {
+					//				console.log(e.detail.page.id + ' back');
+				});
+			})(mui);	
+			//弹出框
+				//更换头像
+		mui(".mui-table-view-cell").on("tap", "#head", function(e) {
+			if(mui.os.plus){
+				var a = [{
+					title: "拍照"
+				}, {
+					title: "从手机相册选择"
+				}];
+				plus.nativeUI.actionSheet({
+					title: "修改头像",
+					cancel: "取消",
+					buttons: a
+				}, function(b) {
+					switch (b.index) {
+						case 0:
+							break;
+						case 1:
+							getImage();
+							break;
+						case 2:
+							galleryImg();
+							break;
+						default:
+							break
+					}
+				})	
+			}
+			
+		});
+
+		function getImage() {
+			var c = plus.camera.getCamera();
+			c.captureImage(function(e) {
+				plus.io.resolveLocalFileSystemURL(e, function(entry) {
+					var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+					console.log(s);
+					document.getElementById("head-img").src = s;
+					document.getElementById("head-img1").src = s;
+					//变更大图预览的src
+					//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+					document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
+				}, function(e) {
+					console.log("读取拍照文件错误：" + e.message);
+				});
+			}, function(s) {
+				console.log("error" + s);
+			}, {
+				filename: "_doc/head.jpg"
+			})
+		}
+
+		function galleryImg() {
+			plus.gallery.pick(function(a) {
+				plus.io.resolveLocalFileSystemURL(a, function(entry) {
+					plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+						root.getFile("head.jpg", {}, function(file) {
+							//文件已存在
+							file.remove(function() {
+								console.log("file remove success");
+								entry.copyTo(root, 'head.jpg', function(e) {
+										var e = e.fullPath + "?version=" + new Date().getTime();
+										document.getElementById("head-img").src = e;
+										document.getElementById("head-img1").src = e;
+										//变更大图预览的src
+										//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+										document.querySelector("#__mui-imageview__group .mui-slider-item img").src = e + "?version=" + new Date().getTime();;
+									},
+									function(e) {
+										console.log('copy image fail:' + e.message);
+									});
+							}, function() {
+								console.log("delete image fail:" + e.message);
+							});
+						}, function() {
+							//文件不存在
+							entry.copyTo(root, 'head.jpg', function(e) {
+									var path = e.fullPath + "?version=" + new Date().getTime();
+									document.getElementById("head-img").src = path;
+									document.getElementById("head-img1").src = path;
+									//变更大图预览的src
+									//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+									document.querySelector("#__mui-imageview__group .mui-slider-item img").src = path;
+								},
+								function(e) {
+									console.log('copy image fail:' + e.message);
+								});
+						});
+					}, function(e) {
+						console.log("get _www folder fail");
+					})
+				}, function(e) {
+					console.log("读取拍照文件错误：" + e.message);
+				});
+			}, function(a) {}, {
+				filter: "image"
+			})
+		};
+
+		function defaultImg() {
+			if(mui.os.plus){
+				plus.io.resolveLocalFileSystemURL("_doc/head.jpg", function(entry) {
+					var s = entry.fullPath + "?version=" + new Date().getTime();;
+					document.getElementById("head-img").src = s;
+					document.getElementById("head-img1").src = s;
+				}, function(e) {
+					document.getElementById("head-img").src = '../images/logo.png';
+					document.getElementById("head-img1").src = '../images/logo.png';
+				})
+			}else{
+				document.getElementById("head-img").src = '../images/logo.png';
+				document.getElementById("head-img1").src = '../images/logo.png';
+			}
+			
+		};
+		document.getElementById("head-img1").addEventListener('tap', function(e) {
+			e.stopPropagation();
+		});
+		
+		</script>
+</html>

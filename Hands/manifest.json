@@ -202,12 +202,26 @@
 					"css/mui.min.css",
 					"fonts/iconfont.ttf",
 					"tab-webview-subpage-chat.html",
-					"js/immersed.js"
+					"js/immersed.js",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.ttf",
+					"css/all.css",
+					"class2.html",
+					"index-about.html"
 				],
 				"refer": [
 					"tab-webview-subpage-setting.html",
 					"tab-webview-subpage-contact.html",
-					"setting.html"
+					"setting.html",
+					"class.html",
+					"job_app1.html",
+					"my-list/setting.html",
+					"job_app.html",
+					"class1.html",
+					"job_tab.html",
+					"job_tab2.html",
+					"job_tab3.html",
+					"city-list.html"
 				],
 				"priority": 0
 			},
@@ -301,12 +315,209 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"my-list/setting.html": {
+				"resources": [
+					"images/logo.png",
+					"fonts/mui.ttf",
+					"js/mui.js"
+				],
+				"refer": [
+					"my-list/mile_main.html",
+					"my-list/account.html",
+					"my-list/resume.html",
+					"my-list/about.html"
+				],
+				"priority": 0
+			},
+			"my-list/mile_main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"my-list/mile_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my-list/account.html": {
+				"resources": [
+					"css/feedback.css",
+					"css/font-awesome.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/feedback.js",
+					"fonts/fontawesome-webfont.ttf",
+					"css/all.css",
+					"js/mui.view.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my-list/resume.html": {
+				"resources": [
+					"css/feedback.css",
+					"js/feedback.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my-list/mile_sub.html": {
+				"resources": [
+					"css/feedback.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_app1.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_app_refuse.html": {
+				"resources": [
+					"css/job.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_app.html": {
+				"resources": [
+					"job_app_application.html",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css",
+					"job_app_refuse.html",
+					"js/zepto_1.1.3.js"
+				],
+				"refer": [
+					" job_app_invite.html",
+					"job_app_invite.html"
+				],
+				"priority": 0
+			},
+			"job_app_application.html": {
+				"resources": [
+					"css/job.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			" job_app_invite.html": {
+				"resources": [
+					"css/job.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"class2.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_tab.html": {
+				"resources": [
+					"css/job.css",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_tab2.html": {
+				"resources": [
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js",
+					"css/job.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"job_app_invite.html": {
+				"resources": [
+					"css/job.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my-list/about.html": {
+				"resources": [
+					"css/feedback.css",
+					"js/feedback.js",
+					"js/mui.view.js",
+					"images/144.png",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"index-about.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css"
+				],
+				"refer": [
+					"job_seekers.html"
+				],
+				"priority": 0
+			},
+			"job_seekers.html": {
+				"resources": [
+					"css/feedback.css",
+					"css/font-awesome.css",
+					"fonts/mui.ttf",
+					"js/feedback.js",
+					"js/mui.view.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/all.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"city-list.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
 				"js/mui.imageViewer.js",
-				"css/feedback.css",
 				"js/mui.picker.min.js",
 				"css/icons-extra.css",
 				"js/mui.dtpicker.js",
@@ -314,27 +525,20 @@
 				"js/mui.lazyload.img.js",
 				"fonts/mui-icons-extra.ttf",
 				"js/mui.zoom.js",
-				"images/logo.png",
-				"css/font-awesome.css",
 				"js/mui.listpicker.js",
 				"js/mui.poppicker.js",
 				"images/60x60.gif",
 				"js/mui.previewimage.js",
 				"css/mui.poppicker.css",
 				"css/mui.imageviewer.css",
-				"js/mui.js",
 				"js/city.data.js",
 				"css/mui.picker.min.css",
 				"images/login-1.png",
-				"js/mui.indexedlist.js",
 				"js/beecloud.js",
-				"js/mui.pullToRefresh.js",
 				"js/mui.picker.js",
-				"js/mui.pullToRefresh.material.js",
 				"css/mui.listpicker.css",
 				"js/mui.lazyload.js",
 				"css/mui.picker.css",
-				"css/mui.indexedlist.css",
 				"css/mui.css",
 				"js/mui.picker.all.js",
 				"js/city.data-3.js",

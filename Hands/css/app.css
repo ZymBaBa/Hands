@@ -18,10 +18,15 @@ html,
 			.mui-pull-right{
 				color: #FFFFFF !important;
 			}
+			.mui-pull-right a{
+				padding: 13px 0;
+			}
 			label{
 				color: #8a8a8a;
 			}
 			#resume input{
 				color: #000000;
 			}
-			
+			.mui-icon-left-nav:before{
+				padding: 10px 0 !important;
+			}

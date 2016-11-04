@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			.title{
+				color: #10ac86 !important;
+			}
+			.mui-btn-success{
+				margin-top: 10px;
+				background: #10ac86 !important;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card is-fullwidth">
+			<footer class=" card-footer box">
+				<a class="card-footer-item">
+					<div class="level-item has-text-centered">
+						<p class="title">3,456,456</p>
+						<p class="heading">求职次数</p>
+					</div>
+				</a>
+		    	<a class="card-footer-item">
+		    		<div class="level-item has-text-centered">
+						<p class="title">3,456,543</p>
+						<p class="heading">招聘岗位</p>
+					</div>
+		    	</a>
+			</footer>
+		</div>
+		<div class="mui-content">
+			<div class="mui-scroll">
+				 <button id="job" type="button" class="mui-btn mui-btn-success mui-btn-block">帮我找兼职</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		//打开关于页面
+				document.getElementById('job').addEventListener('tap', function() {
+			  mui.openWindow({
+				 url:'job_seekers.html', 
+				 id:'job',
+				 show:{
+				 	autoShow:true,
+				 	anisShow:'slide-in-right'
+				 }
+			})
+		});
+//				document.getElementById('class').addEventListener('tap', function() {
+//			  mui.openWindow({
+//				 url:'my-list/class_main.html', 
+//				 id:'class_main.html',
+//				 show:{
+//				 	autoShow:true,
+//				 	anisShow:'slide-in-right'
+//				 }
+//			})
+//		});
+//		document.getElementById('list').addEventListener('tap', function() {
+//			  mui.openWindow({
+//				 url:'select/pullrefresh_main.html', 
+//				 id:'aList',
+//				 show:{
+//				 	autoShow:true,
+//				 	anisShow:'slide-in-right'
+//				 }
+//			})
+//		})
+	</script>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+
+	<body>
+
+		<style>
+			.mui-control-content {
+				background-color: white;
+				/*min-height: 460px;*/
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.mui-table-view-cell:after{
+				height: 0;
+			}
+			.mui-table-view-cell{
+				background-color: #f5f5f5 !important;
+			}
+			.mui-card{
+				color: #000000;
+			}
+			
+			.mui-card ul {
+				padding-left: 14px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.mui-card ul li{
+				list-style: none;
+				color: #8a8a8a;
+				margin-bottom: 8px;
+				margin-top: 3px;
+			}
+			.mui-card ul li span{
+				color: #000000;
+			}
+			.mui-card .mui-card-footer a{
+				color: #10ac86;
+			}
+			.mui-card .mui-card-footer a:first-child{
+				color: #8a8a8a;
+			}
+			.mui-card .mui-card-header span:last-child{
+				color: #10AC86;
+			}
+			/*.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				border-bottom: 2px solid #10ac86 !important;
+			}*/
+		</style>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+				申请中
+			</a>
+					<a class="mui-control-item" href="#item2mobile">
+				被邀请
+			</a>
+					<a class="mui-control-item" href="#item3mobile">
+				被拒绝
+			</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										<div class="mui-card">
+											<div class="mui-card-header">
+												<span>前端实习工程师</span>
+												<span>100元/天</span>
+											</div>
+											<div class="mui-card-content" >
+												<ul>
+													<li>公司名称：<span>嘉兴禾码科技服务有限公司</span></li>
+													<li>薪酬结算 ：<span>月结</span></li>
+													<li>岗位名称：<span>前端工程师</span></li>
+													<li>工作时间：<span>2016.7.8-2016.8.9</span></li>
+													<li>工作地点：<span>嘉兴市海盐塘路464号</span></li>
+													<li>申请时间：<span>2016.7.5</span></li>
+												</ul>
+											</div>
+											<div class="mui-card-footer">
+												<a class="mui-card-link">取消申请</a>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-card">
+											<div class="mui-card-header">
+												<span>前端实习工程师</span>
+												<span>100元/天</span>
+											</div>
+											<div class="mui-card-content" >
+												<ul>
+													<li>公司名称：<span>嘉兴禾码科技服务有限公司</span></li>
+													<li>薪酬结算 ：<span>月结</span></li>
+													<li>岗位名称：<span>前端工程师</span></li>
+													<li>工作时间：<span>2016.7.8-2016.8.9</span></li>
+													<li>工作地址：<span>嘉兴市海盐塘路464号</span></li>
+													<li>申请时间：<span>2016.7.5</span></li>
+												</ul>
+											</div>
+											<div class="mui-card-footer">
+												<a class="mui-card-link">取消申请</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--<h5 class="mui-content-padded">Color</h5>
+			<div class="mui-card">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-radio">
+						<label><span class="mui-bg-primary" style="display:block;width:25px;height:25px;"></span>
+						</label>
+						<input name="radio1" type="radio" checked value="primary">
+					</div>
+					<div class="mui-input-row mui-radio">
+						<label><span class="mui-bg-positive" style="display:block;width:25px;height:25px;"></span>
+						</label>
+						<input name="radio1" type="radio" value="positive">
+					</div>
+					<div class="mui-input-row mui-radio">
+						<label><span class="mui-bg-negative" style="display:block;width:25px;height:25px;"></span>
+						</label>
+						<input name="radio1" type="radio" value="negative">
+					</div>
+				</form>
+			</div>-->
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: false
+			});
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-card"><div class="mui-card-header"><span>'+'前端实习工程师'+'</span><span>'+'100元/天'+'</span></div><div class="mui-card-content"><ul id="conList"><li>通知时间：<span>'+'2016.7.5'+'</span></li><li>联系人 ：<span>'+'周佳缘'+'</span></li><li>联系电话：<span>'+'13967314931'+'</span></li><li>面试地址：<span>'+'嘉兴市海盐塘路464号'+'</span></li></ul></div><div class="mui-card-footer"><a class="mui-card-link">拒绝邀请</a><a class="mui-card-link">接受邀请</a><a class="mui-card-link tel">电话联系</a></div></div></li></ul>';
+				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-card"><div class="mui-card-header"><span>'+'前端实习工程师'+'</span>										<span>'+'100元/天'+'</span></div><div class="mui-card-content" ><ul>											<li>公司名称：<span>'+'嘉兴禾码科技服务有限公司'+'</span></li><li>薪酬结算 ：<span>'+'月结'+'</span></li><li>岗位名称：<span>'+'前端工程师'+'</span></li><li>工作时间：<span>'+'2016.7.8-2016.8.9'+'</span></li><li>工作时间：<span>'+'嘉兴市海盐塘路464号'+'</span></li></ul></div><div class="mui-card-footer"><a class="mui-card-link">删除</a></div></div></li></ul>';
+				var item2 = document.getElementById('item2mobile');
+				var item3 = document.getElementById('item3mobile');
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 500);
+						}
+					}
+				});
+				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+						//force repaint
+						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+					}
+				});
+			})(mui);
+			(function(){
+				var aClass=document.getElementsByClassName("mui-control-content");
+				var controlsScroll = document.getElementById("scroll1");
+				var aH=screen.height;
+				var controlsListScroll=controlsScroll.querySelectorAll(".mui-table-view-cell");
+//				var controlsListHeight=(controlsListScroll[0].offsetHeight)*controlsListScroll.length;
+//				var aH=controlsListHeight-72
+//				alert(aH);
+				aClass[0].style.minHeight=aH+'px';
+				aClass[1].style.minHeight=aH+'px';
+				aClass[2].style.minHeight=aH+'px';
+//				console.log(aClass[0].style.height);
+//				console.log(aClass);
+//				aClass.css('min-height',aH);
+//				alert(aClass.style.Height);
+			})(mui);
+			document.getElementsByClassName("tel").addEventListener('tap', function() {
+			if(mui.os.plus){
+				plus.device.dial("15988368669");
+			}else{
+				location.href = 'tel:15988368669';
+			}
+		});	
+		</script>
+	</body>
+
+</html>

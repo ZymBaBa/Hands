@@ -7,7 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" href="css/iconfont.css" />
 		<link rel="stylesheet" href="css/font-awesome.css" />
@@ -53,30 +52,23 @@
 				padding-top: 8px !important;
 				padding-left: 4px !important;
 			}
-			.fa-map-marker{
-				margin-top: 11px !important;
-				margin-left: 3px !important;
-				margin-right: 8px !important;
-				font-size: 18px !important;
-			}
 		</style>
-	</head>
-	<body>
+			<body>
 		<header class="mui-bar mui-bar-nav mui-badge-green">
-		 	<button id="city" class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
-		 		<span class="mui-icon fa fa-map-marker"></span>嘉兴
+		 	<button class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+		 		嘉兴<span class="mui-icon fa fa-angle-down"></span>
 		 	</button>
-		 	<h1  id="title" class="mui-title">兼职招聘</h1>
+		 	<h1 class="mui-title">兼职招聘</h1>
 		 	<button class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right">
 		 		搜索
 		 	</button>
       	</header>
 		<nav class="mui-bar mui-bar-tab">
-			<a id="defaultTab" class="mui-tab-item mui-active" href="index-about.html">
-					<span class="mui-icon fa fa-safari"></span>
+			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
+				<span class="mui-icon fa fa-safari"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
-			<a class="mui-tab-item" href="class2.html">
+			<a class="mui-tab-item" href="class1.html">
 				<span class="mui-icon fa fa-list"></span>
 				<span class="mui-tab-label">分类</span>
 			</a>
@@ -85,29 +77,23 @@
 				<span class="mui-tab-label">求职</span>
 			</a>
 			<a class="mui-tab-item" href="my-list/setting.html">
-					<span class="mui-icon fa fa-user-circle"></span>
+				<span class="mui-icon fa fa-user-circle"></span>
 				<span class="mui-tab-label">我的</span>
 			</a>
 		</nav>
 		<script src="js/mui.min.js"></script>
-		<script type="text/javascript" charset="utf-8">
+		<script type="text/javascript" charset="utf-8"> 
 			 //mui初始化
-			mui.init();
-			var subpages = ['index-about.html', 'class2.html', 'job_app.html', 'my-list/setting.html'];
+			mui.init({
+				swipeBack: false,
+				statusBarBackground: '#10ac86'
+			});
+			var subpages = ['tab-webview-subpage-about.html', 'class1.html', 'job_app.html', 'my-list/setting.html'];
 			var subpage_style = {
 				top: '45px',
 				bottom: '51px'
 			};
-			document.getElementById('city').addEventListener('tap', function() {
-			  mui.openWindow({
-					 url:'city-list.html', 
-					 id:'city-list.html',
-					 show:{
-					 	autoShow:true,
-					 	anisShow:'slide-in-right'
-					 }
-				})
-			})
+			
 			var aniShow = {};
 			
 			 //创建子页面，首个选项卡页面显示，其它均隐藏；
@@ -166,5 +152,4 @@
 			});
 		</script>
 	</body>
-
 </html>
